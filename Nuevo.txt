@@ -1,0 +1,5 @@
+Hola mi nombre es Johan Ussa tengo 27 años de edad, soy de la ciudad de bogota, 
+vivo en el barrio 20 de julio al sur de la ciudad, es mi primera experiencia de lleno 
+en la programacion, tenia unas bases de programacion ya que realice un curso 
+de introduccion a la programacion en c++ hace algunos meses, y me gusto por eso 
+decidi hacer parte de este proyecto
