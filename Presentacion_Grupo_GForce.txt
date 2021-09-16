@@ -13,3 +13,8 @@ Mi nombre es Miguel Angel Giraldo Restrepo, Soy Biologo y estudie en la universi
 actualmente vivo en el municipio de Versalles Valle , Me interese en la programacion a raiz de mi trabajo de grado
 en el que tuve que utilizar algunas herramientas de este tipo. Por eso ahora mismo me encuentro trabajando en mejorar
  mis habilidades en este campo.
+
+
+Mi nombre es Yerson Andres Valdes, vivo en el Municipio de la Union (Nariño) y Soy Técnico en sistemas y redes. 
+Siempre he tenido interés por la programación y espero que esta oportunidad sea la perfecta para aprender 
+de la mejor manera y poder aplicar los conocimientos adquiridos en el desarrollo de las actividades en mi profesión.
