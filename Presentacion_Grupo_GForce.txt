@@ -1,8 +1,8 @@
 Hola. Mi nombre es Juan Chaves.
-Soy tripulante de Misi�nTIC 2022 y programador principiante.
-Soy tecn�logo en mantenimiento de equipos de c�mputo.
+Soy tripulante de MisiónTIC 2022 y programador principiante.
+Soy tecnólogo en mantenimiento de equipos de cómputo.
 
-Hola mi nombre es Johan Sebastian Ussa, tengo 27 a�os de edad, soy de la ciudad de
+Hola mi nombre es Johan Sebastian Ussa, tengo 27 años de edad, soy de la ciudad de
 bogota, vivo en el barrio 20 de julio al sur de la ciudad, es mi primera 
 experiencia de lleno en la programacion, tenia unas bases en cuanto a 
 conocimientos basicos ya que realice un curso de introduccion a la programacion 
@@ -15,6 +15,13 @@ en el que tuve que utilizar algunas herramientas de este tipo. Por eso ahora mis
  mis habilidades en este campo.
 
 
-Mi nombre es Yerson Andres Valdes, vivo en el Municipio de la Union (Nari�o) y Soy T�cnico en sistemas y redes. 
-Siempre he tenido inter�s por la programaci�n y espero que esta oportunidad sea la perfecta para aprender 
-de la mejor manera y poder aplicar los conocimientos adquiridos en el desarrollo de las actividades en mi profesi�n.
+Mi nombre es Yerson Andres Valdes, vivo en el Municipio de la Union (Nariño) y Soy Técnico en sistemas y redes. 
+Siempre he tenido interés por la programación y espero que esta oportunidad sea la perfecta para aprender 
+de la mejor manera y poder aplicar los conocimientos adquiridos en el desarrollo de las actividades en mi profesión.
+
+
+Mi nombre es Ruth Marina Andrade Portilla,
+Actualmente vivo en Pasto Nariño
+Mi profesión Regente de farmacia y Auxiliar de Enfermería
+No tenía experiencia en el área de programación, es algo nuevo el programa de MisionTic
+Mi expectativa adquirir nuevas herramientas en esta área.
