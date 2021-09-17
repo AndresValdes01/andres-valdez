@@ -1,3 +1,36 @@
+
+                                     ***** Descripción del proyecto *****
+
+Se desarrollará una aplicación web que permita controlar la ventas físicas y virtuales de la  empresa de salud 
+vitafamily, incluyendo, número de ventas, precios, IVA, y todo lo referente a facturación y el debido control 
+de las mismas mediante un seguimiento constante.
+
+Con el propósito de establecer, organizar  y automatizar la información de la empresa, para  mejorar  la gestión 
+de información sobre el inventario y la facturación, donde el sistema incluirá todos los elementos necesarios para 
+realizar el proceso de manera eficaz y oportuna; que permita  conocer datos exactos y coherentes.
+
+El sistema contará  con un módulo de autenticación llamado gestión de usuarios y roles, en el cual requiere un 
+usuario y contraseña para que el usuario arranque, con el fin de brindar protección y seguridad a la empresa. 
+Así como también manejara una base de datos en donde podremos gestionar aquellas personas que tienen acceso a la 
+misma, mediante un acceso seguro por medio de validación de credenciales como usuario y contraseña y que indique 
+el rol que cumple en la empresa, ya sea vendedor, administrador, ejecutivo, operario, director o gerente 
+comercial, estos roles nos servirán para garantizar que según estos, se puedan ajustar a las distintas opciones 
+de cada menú o formulario. También nos permite otorgar o restringir el acceso al sistema para que cualquiera no 
+pueda vulnerar la integridad de la información.
+
+Otro módulo será el encargado de permitir el ingreso de la información básica de los vendedores que participan 
+en el negocio, esta información será la cédula de ciudadanía, el nombre,  el número de celular y la fecha de su ingreso.
+También dispondrá de un módulo de administración de ventas. Permite ingresar o registrar los pedidos realizados por 
+cada uno de los clientes. Deberá tener un identificador único de venta, almacenar el valor total de la venta y la 
+descripción detallada de la misma y tener una fecha inicial y una fecha futura de pago. Además, deberá contar con 
+un encargado responsable de gestionar dicha venta. Se registraran los estados de estas y se podrá ver los diferentes 
+estados de la misma a lo largo del ciclo de vida de la línea de producción.
+
+
+
+                             ***** Presentacion Integrantes grupo GForce *****
+
+
 Hola, mi nombre es Juan Chaves, vivo en la ciudad de Pasto y soy tecnólogo en mantenimiento de equipos de cómputo.
 Soy tripulante de MisiónTIC 2022, espero aprender mucho y aplicarlo en mi vida como programador.
 
@@ -9,10 +42,11 @@ conocimientos basicos ya que realice un curso de introduccion a la programacion
 en el lenguaje C++ hace algunos meses, y me gusto por eso decidi hacer parte de 
 este proyecto y con ello mejorar mi calidad de vida.
 
+
 Mi nombre es Miguel Angel Giraldo Restrepo, Soy Biologo y estudie en la universidad de Valle en la Ciudad de Cali,
 actualmente vivo en el municipio de Versalles Valle , Me interese en la programacion a raiz de mi trabajo de grado
 en el que tuve que utilizar algunas herramientas de este tipo. Por eso ahora mismo me encuentro trabajando en mejorar
- mis habilidades en este campo.
+mis habilidades en este campo.
 
 
 Mi nombre es Yerson Andres Valdes, vivo en el Municipio de la Union (Nariño) y Soy Técnico en sistemas y redes. 
