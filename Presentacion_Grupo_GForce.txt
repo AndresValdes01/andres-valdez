@@ -1,6 +1,6 @@
-Hola. Mi nombre es Juan Chaves.
-Soy tripulante de MisiónTIC 2022 y programador principiante.
-Soy tecnólogo en mantenimiento de equipos de cómputo.
+Hola, mi nombre es Juan Chaves, vivo en la ciudad de Pasto y soy tecnólogo en mantenimiento de equipos de cómputo.
+Soy tripulante de MisiónTIC 2022, espero aprender mucho y aplicarlo en mi vida como programador.
+
 
 Hola mi nombre es Johan Sebastian Ussa, tengo 27 años de edad, soy de la ciudad de
 bogota, vivo en el barrio 20 de julio al sur de la ciudad, es mi primera 
