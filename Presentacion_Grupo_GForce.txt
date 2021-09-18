@@ -26,6 +26,25 @@ descripción detallada de la misma y tener una fecha inicial y una fecha futura 
 un encargado responsable de gestionar dicha venta. Se registraran los estados de estas y se podrá ver los diferentes 
 estados de la misma a lo largo del ciclo de vida de la línea de producción.
 
+Teniendo en cuenta lo anterior para lograr llevar a cabo el proyecto es necesario contar con un grupo de herramientas 
+como: interface development environment(IDE). Git. Es un software de control de versiones de código distribuido, que 
+se instala en la máquina local del desarrollador; Github (repositorio).
+
+Trello (administrador de proyecto), Heroku, plataforma en la nube que permite a las empresas construir, entregar y 
+supervisar aplicaciones para luego poder alojarlas en la nube y posibilitar el acceso a los usuarios de las aplicaciones 
+que se construyen.
+
+También se  realizarán los sprints, los cuales contienen las indicaciones necesarias para el desarrollo de la aplicación 
+web; permitirán organizar, planear, estructurar y desarrollar la aplicación web. 
+Estos son cinco:
+
+  Sprint 1: se hará creación de un equipo de trabajo, y  creación de repositorio/asignación de roles.
+  Sprint 2: creación de interfaces, desarrollo de interfaces gráficas mediante reactjs , 
+            y codificación mediante Typescript y Javascript, HTML5, CSS3.
+  Sprint 3: integrar Backend y FrontEnd para actualizar, eliminar y consultar la información.
+  Sprint 4: implementar la autenticación y la autorización para mejorar la seguridad del sitio web.
+  Sprint 5: desplegar la aplicación en plataformas PAAS  como HEROKU.
+
 
 
                              ***** Presentacion Integrantes grupo GForce *****
