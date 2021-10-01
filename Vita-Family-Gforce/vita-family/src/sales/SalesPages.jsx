@@ -3,10 +3,10 @@ import logo from './logo.jpeg';
 
 function SalesPages() {
   return(
-  <article>
+  <div>
     <img src={logo} className= "imagen"/>
     <h1>Gestion de ventas</h1>;
-  </article>
+  </div>
   )
 }
 
