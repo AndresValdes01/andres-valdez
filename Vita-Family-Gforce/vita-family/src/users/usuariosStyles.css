@@ -1,0 +1,56 @@
+header{
+    border-bottom: 5px green solid;
+    margin: 50px;
+}
+.imagen{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin: 0px;
+}
+
+form{
+    margin: 50px;
+    text-align: center;
+}
+
+.registro{
+    width: 200px;
+    padding: 2px;
+    margin: 4px;
+}
+#selectorRol{
+
+    width: 210px;
+
+}
+
+#Bucador{
+    margin: 0, auto;
+
+}
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+}
+th, td{
+    border: 2px black solid;
+}
+
+
+footer{
+    background-color: rgb(1, 43, 1);
+    margin: 50px 0 0 0;
+}
+.enlace{
+    color: white;
+    text-decoration: none;
+}
