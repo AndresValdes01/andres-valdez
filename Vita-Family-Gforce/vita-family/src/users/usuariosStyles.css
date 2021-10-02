@@ -1,22 +1,14 @@
-header{
-    border-bottom: 5px green solid;
-    margin: 50px;
-}
+
 .imagen{
     display: block;
     margin: 0 auto;
     width: 300px;
 }
-h1{
+.h1-users{
     text-align: center;
 }
 
-h2{
-    text-align: center;
-    margin: 0px;
-}
-
-form{
+.fusers{
     margin: 50px;
     text-align: center;
 }

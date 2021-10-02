@@ -25,7 +25,7 @@ function LoginPage(){
                         <input type="password" id="password"/>
                     </div>
                     <div class="form-div" id="submit">
-                        <button type="submit" name="login" form="login-form">Iniciar sesión</button>
+                        <button type="submit" name="login" form="login-form" className = "btn-login">Iniciar sesión</button>
                     </div>
                 </form>
             </div>

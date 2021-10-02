@@ -8,8 +8,8 @@ function UsuariosPage(){
     <section>
         <div>
         <img src={logo} className= "imagen"/>
-        <h1>Crear usuario</h1>
-        <form>
+        <h1 className ="h1-users">Crear usuario</h1>
+        <form className = "fusers">
             <input className="registro" type="text" placeholder="Usuario Nuevo"/>
             <input className="registro" type="email" placeholder="email"/><br/>
             <input className="registro" type="password" placeholder="Contraseña"/>
@@ -22,7 +22,7 @@ function UsuariosPage(){
         </form>
         </div>
         <div>
-        <form >
+        <form className = "fusers">
         <input type="search" id="Bucador" placeholder="Buscar usuario"/>
         <button>Buscar</button>
         </form>
