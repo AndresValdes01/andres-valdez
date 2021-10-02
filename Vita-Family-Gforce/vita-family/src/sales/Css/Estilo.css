@@ -74,7 +74,6 @@ h6 {
     margin: auto;
     text-align: center;
 }
-
 .fondo {
     padding: 0px !important;
 }
@@ -86,7 +85,7 @@ h6 {
     background-color: rgb(1,43,1);
     color: white !important;
 }
-.imagen {
+.imagenVentas {
     float: left;
     width: 30%;
 }

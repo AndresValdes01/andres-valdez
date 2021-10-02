@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "./assets/logo.jpeg";
-import logoVentas from "./assets/logoVentas.jpg";
-import "./Estilo.css";
+import logo from "./Assets/logo.jpeg";
+import logoVentas from "./Assets/logoVentas.jpg";
+import "./Css/Estilo.css";
 
 function SalesPages() {
   return (
@@ -285,7 +285,7 @@ function SalesPages() {
             <div className="card-body">
               <h5 className="card-title">Nuestro Proposito</h5>
               <div>
-                <img src={logo} className= "imagen"/>
+                <img src={logo} className= "imagenVentas"/>
                 <p className="card-text">
                   Establecer, organizar y automatizar la información de la
                   empresa, para mejorar la gestión de información sobre el
