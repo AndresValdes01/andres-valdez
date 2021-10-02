@@ -1,39 +1,46 @@
-
+/* imagen de logo */
 .imagen{
     display: block;
     margin: 0 auto;
     width: 300px;
 }
+/* titulo pagina usuarios */
 .h1-users{
     text-align: center;
 }
-
+/* form de pagina usuarios */
 .fusers{
     margin: 50px;
     text-align: center;
 }
-
+/* entradas de pagina usuarios */
 .registro{
     width: 200px;
     padding: 2px;
     margin: 4px;
 }
+/* selector de roles */
 #selectorRol{
 
     width: 210px;
 
 }
 
+.bt-users{
+    color:rgb(8, 209, 18);
+    border-radius: 5px;
+}
+
 #Bucador{
     margin: 0, auto;
 
 }
-table{
+.tabla{
     margin: 0 auto;
     border-collapse: collapse;
     
 }
-th, td{
+.th-users, .td-users{
     border: 2px black solid;
 }
 
