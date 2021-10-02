@@ -1,0 +1,111 @@
+#body {
+    background-color: rgb(231, 231, 231);
+}
+#alink {
+    color: rgb(8, 209, 18) !important;
+}
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 2px black;
+    padding-top: 30px;
+    font-size: 50px;
+    color: rgb(95, 95, 95);
+}
+#icono {
+    max-width: 255px;
+    margin: 0px auto;
+    padding: 0;
+    opacity: 80%;
+}
+fieldset {
+    display: block;
+    margin: 10px 20px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(150, 148, 148);
+}
+legend {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.input-group.flex-nowrap {  
+    margin: auto;  
+    margin-bottom: 15px;
+    position: relative;
+    width: 70%;
+}
+.input-group-text {  /* cantidad, id */  
+    width: 130px;
+}
+#hrmain {
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+h6 {    
+    margin-left: 10%;
+    padding-top: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+#hrinfo {
+    max-width: 30%; 
+    margin-left: 50px; 
+}
+.divcliente {
+    padding-left: 10%;
+}
+.btnsection {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.p-3.border.bg-light {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.fondo {
+    padding: 0px !important;
+}
+.bg-light {
+    background: rgb(231, 231, 231) !important;
+    border: 10px;
+}
+.card-header, .card-footer  {
+    background-color: rgb(1,43,1);
+    color: white !important;
+}
+.imagen {
+    float: left;
+    width: 30%;
+}
+.card-text {
+    width: 70%;
+    float: left;
+    padding-top: 40px;
+}
+.btn.btn-success.btn1 {
+    margin: auto;
+    margin-top: 30px;
+}
+.card-title {
+    width: 50%;
+    text-align: right;
+    font-size: 25px;  
+    font-style: italic; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    padding-right: 50px;
+    padding-top: 20px;    
+}
