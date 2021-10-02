@@ -1,5 +1,5 @@
 
-body{
+.Bstate{
 	background-color: #f5f5f5;
 	font-family: Arial;
 }
@@ -7,6 +7,22 @@ body{
     margin: 30px ;
     display: table;
     
+}
+.pstate{
+	margin: 0 auto;
+	text-align: center;
+}
+.fstate{
+	margin: 0 auto;
+	text-align: center;
+}
+.h1-state{
+	text-align: center;
+}
+
+#Bucador{
+    margin: 0, auto;
+
 }
 
 .tb-state{
