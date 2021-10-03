@@ -4,6 +4,9 @@ import logoVentas from "./Assets/logoVentas.jpg";
 import "./Css/Estilo.css";
 
 function SalesPages() {
+  const Mensaje = () => {
+    alert("Se ha añadido la venta correctamente");
+  };
   return (
     <div>
       <body id="body">
@@ -31,7 +34,7 @@ function SalesPages() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">
+                    <a className="nav-link" aria-current="page" href="#" >
                       Registrar Ventas
                     </a>
                   </li>
@@ -173,7 +176,7 @@ function SalesPages() {
               <br />
             </div>
             <div className="d-grid gap-2 col-6 mx-auto">
-              <button className="btn btn-dark" type="submit">
+              <button className="btn btn-dark" type="submit" onClick={() => Mensaje()}>
                 Agregar Informacion
               </button>
             </div>
