@@ -88,6 +88,12 @@ function SalesPages() {
               </div>
               <div className="input-group flex-nowrap">
                 <span className="input-group-text" id="addon-wrapping">
+                  Valor Total
+                </span>
+                <input type="tel" className="form-control" placeholder=" Precio Total Venta" />
+              </div>
+              <div className="input-group flex-nowrap">
+                <span className="input-group-text" id="addon-wrapping">
                   Fecha Venta
                 </span>
                 <input type="date" className="form-control" placeholder=" Fecha de la Venta" />
@@ -116,7 +122,7 @@ function SalesPages() {
             <div className="divsaler">
               <div className="input-group flex-nowrap">
                 <span className="input-group-text" id="addon-wrapping">
-                  Nombre Asesor
+                  Nombre
                 </span>
                 <input type="text" className="form-control" placeholder="Nombre del Vendedor o encargado de la venta" />
               </div>
@@ -142,7 +148,7 @@ function SalesPages() {
             </div>
             <br />
             <br />
-
+    
             <ul class="nav nav-tabs">
               <li class="nav-item">
                 <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -204,7 +210,7 @@ function SalesPages() {
           </fieldset>
         </form>
 
-        <footer>
+        <footer id="foot">
           <div className="card text-center">
             <div className="card-header">Vita Family</div>
               <div className="card-body">
