@@ -27,51 +27,51 @@ function UsuariosPage(){
         <button>Buscar</button>
         </form>
         
-        <table id="tabla">
+        <table className="tabla">
             <tr class="fila">
-                <th>Usuario ID</th>
-                <th>Email</th>
-                <th>Rol de usuario</th>
-                <th>Estado</th>
+                <th className = "th-users">Usuario ID</th>
+                <th className = "th-users">Email</th>
+                <th className = "th-users">Rol de usuario</th>
+                <th className = "th-users">Estado</th>
             </tr>
             <tr class="fila">
-                <td>Miguel Giraldo</td>
-                <td>giraldomiguel19@gmail.com</td>
-                <td>
+                <td className="td-users">Miguel Giraldo</td>
+                <td className="td-users">giraldomiguel19@gmail.com</td>
+                <td className="td-users">
                     <select>
                         <option>Pendiente</option>
                         <option >Vendedor</option>
                         <option >Administrador</option>
                     </select>
                 </td>
-                <td>
+                <td className="td-users">
                     <select>
                         <option>Pendiente</option>
                         <option >Autorizado</option>
                         <option >No autorizado</option>
                     </select>
                 </td>
-                <td><button> Eliminar</button><button>Actualizar</button></td>
+                <td className="td-users"><button> Eliminar</button><button>Actualizar</button></td>
 
             </tr>
             <tr class="fila">
-                <td>Pedro Perez</td>
-                <td>Pedroperez@gmail.com</td>
-                <td>
+                <td className="td-users">Pedro Perez</td>
+                <td className="td-users">Pedroperez@gmail.com</td>
+                <td className="td-users">
                     <select>
                         <option>Pendiente</option>
                         <option >Vendedor</option>
                         <option >Administrador</option>
                     </select>
                 </td>
-                <td>
+                <td className="td-users">
                     <select>
                         <option>Pendiente</option>
                         <option >Autorizado</option>
                         <option >No autorizado</option>
                     </select>
                 </td>
-                <td><button> Eliminar</button><button>Actualizar</button></td>
+                <td className="td-users"><button> Eliminar</button><button>Actualizar</button></td>
             </tr>
 
         </table>
