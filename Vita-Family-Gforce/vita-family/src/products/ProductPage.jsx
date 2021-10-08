@@ -22,7 +22,7 @@ function ProductPage() {
                 <option >Disponible</option>
                 <option >No Disponible</option>
             </select><br/>
-            <button type="submit" onClick={()=>Mensaje()}> Guardar producto</button>
+            <button type="submit" onClick={()=>Mensaje()}>Registrar producto</button>
             <button type="reset"> Cancelar</button>
         </form>
       </div>
@@ -51,7 +51,7 @@ function ProductPage() {
                       <option >Bodega</option>
                     </select>
           </td>
-            <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Editar producto</button></td>
+            <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button></td>
           </tr>
           <tr className="trproducts">
             <td className ="tdproducts">2</td><td className ="tdproducts">1000</td><td className ="tdproducts">P002</td><td className ="tdproducts">3</td><td className ="tdproducts">Ensure lata x 400gr</td>
@@ -63,7 +63,7 @@ function ProductPage() {
               <option >Bodega</option>
               </select>
             </td>
-          <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Editar producto</button></td>
+          <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button></td>
 
           </tr>
           <tr className="trproducts">
@@ -75,7 +75,7 @@ function ProductPage() {
             <option >Bodega</option>
             </select>
         </td>
-        <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Editar producto</button>
+        <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button>
         </td>
         </tr>
       </table>
