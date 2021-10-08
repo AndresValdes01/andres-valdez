@@ -4,7 +4,7 @@
 #alink {
     color: rgb(8, 209, 18) !important;
 }
-h1 {
+#titles {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     text-shadow: 3px 3px 2px black;
@@ -28,6 +28,7 @@ fieldset {
     border-width: 2px;
     border-style: solid;
     border-color: rgb(150, 148, 148);
+    box-shadow: 2px 2px 5px black;
 }
 legend {
     text-align: center;
@@ -51,10 +52,12 @@ legend {
     padding-bottom: 2px;
     width: 50%;
 }
-h6 {    
+.titlesh6 {    
     margin-left: 10%;
     padding-top: 20px;
     text-shadow: 1px 1px 2px black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 #hrinfo {
     max-width: 30%; 
@@ -87,12 +90,12 @@ h6 {
 }
 .imagenVentas {
     float: left;
-    width: 30%;
+    width: 25%;
 }
 .card-text {
     width: 70%;
     float: left;
-    padding-top: 40px;
+    padding-top: 15px;
 }
 .btn.btn-success.btn1 {
     margin: auto;
@@ -105,6 +108,16 @@ h6 {
     font-style: italic; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: auto;
-    padding-right: 50px;
-    padding-top: 20px;    
+    margin-top: 10px;
+    padding-right: 50px;   
+}
+#divpie {
+    max-height: 150px;
+}
+.nav {
+    padding-left: 5%;
+    flex-wrap: nowrap; 
+}
+.card {
+    line-height: 20px;
 }
