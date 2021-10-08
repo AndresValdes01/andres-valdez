@@ -2,8 +2,13 @@ import React from 'react';
 import logo from './logo.jpeg'
 import './usuariosStyles.css'
 
+const Mensaje = () => {
+    alert("Usuario Creado exitosamente");
+}
+
 function UsuariosPage(){
     const MostrarAlerta = () => {alert("Se registro nuevo usuario exitosamente")}
+    
     return(
     <section>
         <div>
@@ -17,7 +22,7 @@ function UsuariosPage(){
                 <option >Vendedor</option>
                 <option >Administrador</option>
             </select><br/>
-            <button type="submit" onClick={()=>MostrarAlerta()}> Crear usuario</button>
+            <button type="submit" onClick={()=>Mensaje()}> Crear usuario</button>
             <button type="reset"> Cancelar</button>
         </form>
         </div>
