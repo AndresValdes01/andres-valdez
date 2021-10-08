@@ -8,10 +8,11 @@ function Navbar(props) {
   <nav className="barra">
     
     <Link to = "/login" className= "links" >Log-out</Link>
-    <Link to = "/productos" className ="links">Gestion de productos</Link>
-    <Link to = "/usuarios" className="links">Gestion de usuarios</Link>
     <Link to = "/gestionventas" className="links">Gestion de Ventas</Link>
     <Link to = "/estadoventas" className="links">Estado de Ventas</Link>
+    <Link to = "/productos" className ="links">Gestion de productos</Link>
+    <Link to = "/usuarios" className="links">Gestion de usuarios</Link>
+
     
   </nav>
   
