@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import RegisterPage from "./register/RegisterPage";
 import LoginPage from "./login/LoginPage";
 import Navbar from "./shared/components/header/navbar/Navbar";
+import NavbarSales from "./shared/components/header/navbarSalesPage";
 import { BrowserRouter as Router, Switch, Route,} from "react-router-dom";
 import UsuariosPage from "./users/UsuariosPage";
 import ProductPage from "./products/ProductPage";
@@ -28,6 +29,7 @@ function App() {
           <ProductPage></ProductPage>
         </Route>
         <Route path="/gestionventas" exact>
+          <NavbarSales/>
           <SalesPages></SalesPages>
         </Route>
         <Route path="/estadoventas" exact>

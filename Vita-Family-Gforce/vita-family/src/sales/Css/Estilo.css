@@ -1,13 +1,19 @@
 #body {
     background-color: rgb(231, 231, 231);
 }
+#padNav {
+    padding-left: 60px;
+}
+.nav-item.navMain {
+    padding-left: 30px;
+}
 #alink {
     color: rgb(8, 209, 18) !important;
 }
 #titles {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 3px 3px 2px black;
+    text-shadow: 2px 2px 4px black;
     padding-top: 30px;
     font-size: 50px;
     color: rgb(95, 95, 95);
@@ -45,6 +51,9 @@ legend {
 }
 .input-group-text {  /* cantidad, id */  
     width: 130px;
+}
+#labelSearch {
+    width: 120px;
 }
 #hrmain {
     margin: auto;
@@ -120,4 +129,34 @@ legend {
 }
 .card {
     line-height: 20px;
+}
+.labelconf {
+    background-color: #f1faee;
+    padding-bottom: 25px; 
+    color: rgb(1,43,1);
+    width: 50%;
+}
+.labelconf1 {
+    background-color: #7bac69;
+    padding-bottom: 25px;  
+    color: white;
+    width: 50%;
+}
+#select {
+    width: 450px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+#btn-listar {
+    margin: 0px 3px;
+}
+#filaNomCol {
+    background-color: #01642c;
+    color: white;
+}
+.trList:nth-child(even) { /* Renglones pares */
+    background-color: #f1faee;
+}
+.trList:nth-child(odd) { /* Renglones impares */
+    background-color: #d3fac7;
 }
