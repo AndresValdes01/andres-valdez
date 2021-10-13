@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function NavbarSales() {
+
     const { user, isAuthenticated } = useAuth0();
     const { logout } = useAuth0();
+
     return (
-        <div id="navPos2">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav id="navColor" className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">                
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -92,7 +93,6 @@ function NavbarSales() {
                 }                            
             </div>
         </nav>
-        </div>
     )
 }
 

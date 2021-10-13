@@ -4,12 +4,14 @@ import logoVentas from "./Assets/logoVentas.jpg";
 import "./Css/Estilo.css";
 
 function SalesPages() {  
+
   const Mensaje = () => {
     alert("Producto Guardado correctamente");
   }     
+
   return (
     <div>
-      <body id="body">
+      <body id="body1">
         <header>          
           <h1 id="titles">Administracion de Ventas</h1>
         </header>
@@ -156,9 +158,7 @@ function SalesPages() {
                 </div>
               </div>
             </div>
-
-            <br />
-            <br />
+            <br /><br />
     
             <ul className="nav nav-tabs">
               <li className="nav-item">

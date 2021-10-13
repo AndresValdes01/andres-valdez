@@ -1,4 +1,4 @@
-#body {
+#body1 {
     background-color: rgb(231, 231, 231);
 }
 #padNav {
@@ -6,6 +6,9 @@
 }
 .nav-item.navMain {
     padding-left: 30px;
+}
+#navColor {
+    background-color: rgb(0, 39, 0) !important;
 }
 #circleLog {
     width: 35px; 
@@ -19,7 +22,7 @@
     width: 50px;
     height: 50px;
     color: white;
-    background-color: rgb(1,43,1);
+    background-color: black;
     margin-top: 6px;
 }
 #btnLogout {
@@ -42,7 +45,7 @@
 #titles {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 3px 3px 2px black;
     padding-top: 30px;
     font-size: 50px;
     color: rgb(95, 95, 95);
