@@ -162,10 +162,10 @@ function SalesPages() {
     
             <ul className="nav nav-tabs">
               <li className="nav-item">
-                <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalBusqueda">
                   Buscar Venta
                 </button>
-                <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="modalBusqueda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">

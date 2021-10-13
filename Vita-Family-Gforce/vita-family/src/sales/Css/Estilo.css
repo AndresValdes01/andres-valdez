@@ -2,13 +2,42 @@
     background-color: rgb(231, 231, 231);
 }
 #padNav {
-    padding-left: 60px;
+    padding-left: 30px;
 }
 .nav-item.navMain {
     padding-left: 30px;
 }
-#alink {
+#circleLog {
+    width: 35px; 
+    margin: 0px;     
+}
+#circleLog2 {
+    margin: auto;
+    border: 2px solid #01642c;
+}
+#btnSinImagen {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(1,43,1);
+    margin-top: 6px;
+}
+#btnLogout {
+    margin: auto;
+}
+.userEmail {
+    text-align: center;
+    color: #4b8536;
+}
+.rounded-circle {
+    margin-left: 2%;
+    margin-right: 5px;
+    background-color: black;    
+}
+#alink { /* Boton Log */
     color: rgb(8, 209, 18) !important;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 #titles {
     text-align: center;

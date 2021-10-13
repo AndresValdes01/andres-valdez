@@ -1,20 +1,20 @@
-import React, { Fragment } from "react";
+import React from "react";
 import RegisterPage from "./register/RegisterPage";
 import LoginPage from "./login/LoginPage";
-import Navbar from "./shared/components/header/navbar/Navbar";
 import NavbarSales from "./shared/components/header/navbarSalesPage";
-import { BrowserRouter as Router, Switch, Route,} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UsuariosPage from "./users/UsuariosPage";
 import ProductPage from "./products/ProductPage";
 import SalesPages from "./sales/SalesPages";
 import StatePages from "./states/StatePages";
 
-
-
 function App() {
   return (
     <Router>
-      <Navbar></Navbar>
+      <NavbarSales/>
+      <Route path="/" exact>
+        <LoginPage></LoginPage>
+      </Route>
       <Switch>
         <Route path="/login" exact>
           <LoginPage></LoginPage>
@@ -28,8 +28,7 @@ function App() {
         <Route path="/productos" exact>
           <ProductPage></ProductPage>
         </Route>
-        <Route path="/gestionventas" exact>
-          <NavbarSales/>
+        <Route path="/gestionventas" exact>          
           <SalesPages></SalesPages>
         </Route>
         <Route path="/estadoventas" exact>

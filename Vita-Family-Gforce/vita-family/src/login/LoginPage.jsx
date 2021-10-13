@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './vitafamily-logo.png'
 import "./loginStyles.css"
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 function LoginPage(){
-
+    const { loginWithRedirect } = useAuth0();
     return(
         <div> 
             <div class="contenedor">
@@ -13,7 +13,7 @@ function LoginPage(){
                     <div class="google-icon-wrapper">
                         <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                     </div>
-                    <a href="#" class="btn-text"><b>Iniciar sesión con Google</b></a>
+                    <a href="#" class="btn-text" onClick={() => loginWithRedirect()}><b>Iniciar sesión con Google</b></a>
                 </div>
                 <form class="form" id="login-form">
                     <div class="form-div">

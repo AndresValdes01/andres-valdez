@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function NavbarSales() {
+    const { user, isAuthenticated } = useAuth0();
+    const { logout } = useAuth0();
     return (
+        <div id="navPos2">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <a id="alink" claclassName="navbar-brand" href="#">Vita Family</a>
+            <div className="container-fluid">                
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
                     <span className="navbar-toggler-icon"></span>
@@ -34,7 +37,7 @@ function NavbarSales() {
                         </li>
                         <li className="nav-item navMain">
                             <Link to = "/login" className="nav-link" href="#">
-                                Log out
+                                Login
                             </Link>
                         </li>
                     </ul>
@@ -43,10 +46,53 @@ function NavbarSales() {
                         <button className="btn btn-outline-success" type="submit">
                             Search
                         </button>
-                    </form>
-                </div>
+                    </form>                    
+                </div>                                                    
+                 
+                {isAuthenticated ? 
+                    <button type="button" className="rounded-circle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img id="circleLog" src={user.picture} alt={user.name} className="rounded-circle" title="User" /> 
+                    </button> :
+                    <button id="btnSinImagen" type="button" className="rounded-circle" data-bs-toggle="modal" 
+                        data-bs-target="#exampleModal">U</button>     
+                }                                                                                                     
+                {isAuthenticated ? 
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">                     
+                            <div class="modal-header">
+                                <img id="circleLog2" src={user.picture} alt={user.name} 
+                                    className="rounded-circle" title="User" />                                
+                            </div>
+                            <div class="modal-body">
+                                <h5 className="userEmail">{user.name}</h5>
+                                <h6 className="userEmail">{user.email}</h6>
+                            </div>
+                            <div id="btnLogout" class="modal-footer">                                
+                                <button type="button" class="btn btn-success" 
+                                    onClick={() => logout({ returnTo: window.location.origin })}>
+                                    Cerrar Sesion
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> : 
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">                                              
+                            <div id="btnLogout" class="modal-footer">                                
+                                <button type="button" class="btn btn-success" 
+                                    onClick={() => logout({ returnTo: window.location.origin })}>
+                                    Iniciar Sesion
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                }                            
             </div>
         </nav>
+        </div>
     )
 }
 
