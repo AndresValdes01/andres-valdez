@@ -42,8 +42,20 @@
 }
 .th-users, .td-users{
     border: 2px black solid;
+    text-align: center;
+    padding: 10px;
 }
-
+.filausers:nth-child(even){
+	background-color: #ddd;
+}
+.filausers:hover td{
+	background-color: #369681;
+	color: white;
+}
+.fpusers{
+    background-color: #0d3a30;
+    color: white;
+}
 
 footer{
     background-color: rgb(1, 43, 1);

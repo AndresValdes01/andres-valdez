@@ -62,11 +62,8 @@ import axios from 'axios';
         <button>Buscar</button>
         </form>        
         
-            
-            {this.state.usuarios.map(
-                  usuario =>
-                <table id="tabla">
-                <tr class="fila">
+        <table className="tabla">
+                <tr class="fpusers">
                   <th className ="th-users">Usuario ID</th>
                   <th className ="th-users">Nombre</th>
                   <th className ="th-users">Email</th>
@@ -74,7 +71,10 @@ import axios from 'axios';
                   <th className ="th-users">Estado</th>
                   <th className ="th-users">Acción</th>
                 </tr>
-                <tr class="fila">
+            {this.state.usuarios.map(
+                  usuario =>
+
+                <tr class="filausers">
                       <td className="td-users">{usuario.codigo}</td>
                       <td className="td-users">{usuario.nombre}</td>
                       <td className="td-users">{usuario.email}</td>
@@ -82,8 +82,9 @@ import axios from 'axios';
                       <td className="td-users">{usuario.estado}</td>
                       <td className ="td-users"><button> Eliminar</button><button>Actualizar</button></td>
                 </tr>
-                    </table>
+                    
                   )}
+                  </table>
 
         
         </div>
