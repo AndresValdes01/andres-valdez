@@ -2,7 +2,7 @@
 
 const express = require ('express');
 
-const apiUsuarios = require('./routes/usuario.routes');
+const apiRoutes = require('./routes/routes');
 const app = express();
 
 app.use(express.urlencoded({extended:false}));
@@ -14,6 +14,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use('/api', apiUsuarios);
+app.use('/api', apiRoutes);
 
 module.exports=app
