@@ -1,10 +1,12 @@
 'use strict'
 
 const express = require ('express');
+const morgan = require('morgan');
 
 const apiRoutes = require('./routes/routes');
 const app = express();
 
+app.use(morgan('dev')); // Modo desarrollador dev
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 

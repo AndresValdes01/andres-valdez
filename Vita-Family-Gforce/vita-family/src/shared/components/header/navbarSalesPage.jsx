@@ -58,19 +58,19 @@ function NavbarSales() {
                         data-bs-target="#exampleModal">U</button>     
                 }                                                                                                     
                 {isAuthenticated ? 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">                     
-                            <div class="modal-header">
+                <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-sm">
+                        <div className="modal-content">                     
+                            <div className="modal-header">
                                 <img id="circleLog2" src={user.picture} alt={user.name} 
                                     className="rounded-circle" title="User" />                                
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                 <h5 className="userEmail">{user.name}</h5>
                                 <h6 className="userEmail">{user.email}</h6>
                             </div>
-                            <div id="btnLogout" class="modal-footer">                                
-                                <button type="button" class="btn btn-success" 
+                            <div id="btnLogout" className="modal-footer">                                
+                                <button type="button" className="btn btn-success" 
                                     onClick={() => logout({ returnTo: window.location.origin })}>
                                     Cerrar Sesion
                                 </button>
@@ -78,11 +78,11 @@ function NavbarSales() {
                         </div>
                     </div>
                 </div> : 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">                                              
-                            <div id="btnLogout" class="modal-footer">                                
-                                <button type="button" class="btn btn-success" 
+                <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog modal-sm">
+                        <div className="modal-content">                                              
+                            <div id="btnLogout" className="modal-footer">                                
+                                <button type="button" className="btn btn-success" 
                                     onClick={() => logout({ returnTo: window.location.origin })}>
                                     Iniciar Sesion
                                 </button>
