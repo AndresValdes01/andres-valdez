@@ -23,20 +23,15 @@ function registrarProducto(req, res){
     console.log(req.body);
 
     //Primero buscamos el producto en la abse de datos
-    Producto.findOne({ID_producto: req.body.ID_producto}, (err, productoEnBaseDeDatos)=>{
+    Producto.findOne({id: req.body.id}, (err, productoEnBaseDeDatos)=>{
         if(!productoEnBaseDeDatos){
             //Si no se encuentra el producto, se guarda
             let productoTemp = {
-                ID_producto: req.body.ID_producto,
-                Descripcion_producto : req.body.Descripcion_producto,
+                id: req.body.id,
+                Descripcion: req.body.Descripcion,
                 preciounidad: req.body.preciounidad,
                 cantidad: req.body.cantidad,
-                estado: req.body.estado,
-                buscarproducto: req.body.buscarproducto,
-                Crearproducto: req.body.Crearproducto,
-                registrarproducto: req.body.registrarproducto,
-                disponible: req.body.disponible,
-                
+                estado: req.body.estado,               
             }
         
             let productoARegistrar = new Producto(productoTemp);
@@ -58,7 +53,7 @@ function registrarProducto(req, res){
         }else{
             //Si se encuentra el producto sacamos un error
             res.status(202).send({
-                message: `El producto con ID_producto ${req.body.ID_producto} ya se encuentra registrado`
+                message: `El producto con ID ${req.body.id} ya se encuentra registrado`
             })
         }
     });

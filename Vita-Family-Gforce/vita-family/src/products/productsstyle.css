@@ -2,6 +2,15 @@
     margin: 10px ;
     display: table;
 }
+.fproduct{
+    margin: 50px;
+    text-align: center;
+}
+.registro{
+    width: 200px;
+    padding: 2px;
+    margin: 4px;
+}
 .imagen{
     display: block;
     margin: 0 auto;

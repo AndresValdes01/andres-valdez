@@ -12,21 +12,20 @@ class ProductPage extends React.Component{
   componentDidMount(){
     axios.get('http://localhost:3001/api/productos')
     .then(res=>{
-      const Productos = res.data.productos;
-      this.setState({Productos});
+      const productos = res.data.productos;
+      this.setState({productos});
     })
   }
-     registrarProducto(Event){
-      Event.preventDefault();
+     registrarProducto(event){
+      event.preventDefault();
   
       //consumir post con axios
       axios.post('http://localhost:3001/api/productos',{
-        ID_producto: Event.target.No.value,  
-        Descripcion_producto: Event.target.Descripcion.value,          
-        preciounidad: Event.target.preciounidad.value,
-        cantidad: Event.target.cantidad.value,
-        estado: Event.target.estado.value,
-
+        id: event.target.id.value,  
+        Descripcion: event.target.Descripcion.value,          
+        preciounidad: event.target.preciounidad.value,
+        cantidad: event.target.cantidad.value,
+        estado: event.target.estado.value
 
       }).then(res =>{ 
          alert(res.data.message);
@@ -42,13 +41,13 @@ class ProductPage extends React.Component{
         <img src={logo} className= "logo.jpep" className="imagen"/>
         <h1 className= "h1products">Gestión de productos</h1>
       </div>
-      <div>
-      <form onSubmit ={this.registrarProducto}className = "fproduct">
-            <input name ="No" className="registro" type="text" placeholder="Numero de producto"/>
+      <div className ="cont">
+      <form onSubmit ={this.registrarProducto} className = "fproduct">
+            <input name ="id" className="registro" type="text" placeholder="Numero de producto"/>
             <input name ="Descripcion" className="registro" type="text" placeholder="Nuevo producto"/>
-            <input name ="preciounidad"className="registro" type="number" placeholder="precio unidad"/><br/>
+            <input name ="preciounidad" className="registro" type="number" placeholder="precio unidad"/><br/>
             <input name="cantidad" className="registro" type="number" placeholder="cantidad"/>
-            <select name="estadop" id="selectorRol" name="estado">
+            <select name="estado" id="selectorRol">
                 <option >Disponible</option>
                 <option >No Disponible</option>
             </select><br/>
@@ -68,16 +67,23 @@ class ProductPage extends React.Component{
       <table className= "tproducts">
         <thead className ="theadproducts">
           <tr className="trproducts">
-            <th className ="thproducts">No</th><th className ="thproducts">Precio unitario</th><th className ="thproducts">id</th><th className ="thproducts">Cantidad</th>
-                      <th className ="thproducts">Descripción producto</th><th className ="thproducts"></th><th className ="thproducts">Almacenamiento</th><th className ="thproducts">Acción</th>
+            <th className ="thproducts">ID</th>
+            <th className ="thproducts">Precio unitario</th>
+            <th className ="thproducts">Cantidad</th>
+            <th className ="thproducts">Descripción producto</th>
+            <th className ="thproducts">estado</th>
+            <th className ="thproducts">Acción</th>
           </tr>
         </thead>
         {this.state.productos.map(
           producto =>
         <tr className="trproducts">
-          <td className ="tdproducts">{producto.No}</td><td className ="tdproducts">{producto.preciounidad}</td><td className ="tdproducts">8</td><td className ="tdproducts">{producto.cantidad}</td><td className ="tdproducts">{producto.Descripcion}</td>
+          <td className ="tdproducts">{producto.id}</td>
+          <td className ="tdproducts">{producto.preciounidad}</td>
+          <td className ="tdproducts">{producto.cantidad}</td>
+          <td className ="tdproducts">{producto.Descripcion}</td>
           <td className ="tdproducts">{producto.estado}</td>
-          <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button></td>
+          <td className ="tdproducts"><button>borrar</button><button>Actualizar</button></td>
           </tr>
       )}
            </table>

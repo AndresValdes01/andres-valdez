@@ -30,7 +30,7 @@ import axios from 'axios';
           console.log(res.data);
         })
     
-    
+        
       }
     
       render(){

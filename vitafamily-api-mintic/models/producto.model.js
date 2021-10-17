@@ -3,15 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ProductoSchema = Schema({
-    ID_producto: String,
-    Descripcion_producto: String,
-    preciounidad: String,
-    cantidad: String,
-    estado: String,
-    buscarproducto: String,
-    crearproducto:String,
-    registrarproducto:String,
-    disponible:String,
+    id: String,
+    Descripcion: String,
+    preciounidad: Number,
+    cantidad: Number,
+    estado: String
 });
 
 module.exports = mongoose.model('Producto', ProductoSchema);
