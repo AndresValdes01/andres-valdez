@@ -1,5 +1,5 @@
 const VentaCtrl = {};
-const Ventas = requiere('../models/ventas.model');
+const Ventas = require('../models/ventas.model');
 
 VentaCtrl.getVentas = (req, res) => {
 

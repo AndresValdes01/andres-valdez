@@ -1,0 +1,194 @@
+.cuerpo {
+    background-color: rgb(231, 231, 231);
+}
+#padNav {
+    padding-left: 30px;
+}
+.nav-item.navMain {
+    padding-left: 30px;
+}
+#navColor {
+    background-color: rgb(0, 39, 0) !important;
+}
+#circleLog {
+    width: 35px; 
+    margin: 0px;     
+}
+#circleLog2 {
+    margin: auto;
+    border: 2px solid #01642c;
+}
+#btnSinImagen {
+    width: 38px;
+    height: 38px;
+    color: white;
+    background-color: black;
+    margin-top: 6px;
+}
+#btnLogout {
+    margin: auto;
+}
+.userEmail {
+    text-align: center;
+    color: #4b8536;
+}
+.rounded-circle {
+    margin-left: 2%;
+    margin-right: 5px;
+    background-color: black;    
+}
+#alink { /* Boton Log */
+    color: rgb(8, 209, 18) !important;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#titles {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 2px black;
+    padding-top: 30px;
+    font-size: 50px;
+    color: rgb(95, 95, 95);
+}
+#icono {
+    max-width: 255px;
+    margin: 0px auto;
+    padding: 0;
+    opacity: 80%;
+}
+fieldset {
+    display: block;
+    margin: 10px 20px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(150, 148, 148);
+    box-shadow: 2px 2px 5px black;
+}
+legend {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.input-group.flex-nowrap {  
+    margin: auto;  
+    margin-bottom: 15px;
+    position: relative;
+    width: 70%;
+}
+.input-group-text {  /* cantidad, id */  
+    width: 130px;
+}
+#labelSearch {
+    width: 120px;
+}
+#hrmain {
+    margin: auto;
+    margin-bottom: 40px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+.titlesh6 {    
+    margin-left: 10%;
+    padding-top: 20px;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#hrinfo {
+    max-width: 30%; 
+    margin-left: 50px; 
+}
+.divcliente {
+    padding-left: 10%;
+}
+.btnsection {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.p-3.border.bg-light {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.fondo {
+    padding: 0px !important;
+}
+.bg-light {
+    background: rgb(231, 231, 231) !important;
+    border: 10px;
+}
+.card-header, .card-footer  {
+    background-color: rgb(1,43,1);
+    color: white !important;
+}
+.imagenVentas {
+    float: left;
+    width: 25%;
+}
+.card-text {
+    width: 70%;
+    float: left;
+    padding-top: 15px;
+}
+.btn.btn-success.btn1 {
+    margin: auto;
+    margin-top: 30px;
+}
+.card-title {
+    width: 50%;
+    text-align: right;
+    font-size: 25px;  
+    font-style: italic; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    margin-top: 10px;
+    padding-right: 50px;   
+}
+#divpie {
+    max-height: 150px;
+}
+.nav {
+    padding-left: 5%;
+    flex-wrap: nowrap; 
+}
+.card {
+    line-height: 20px;
+}
+.labelconf {
+    background-color: #f1faee;
+    padding-bottom: 25px; 
+    color: rgb(1,43,1);
+    width: 50%;
+}
+.labelconf1 {
+    background-color: #7bac69;
+    padding-bottom: 25px;  
+    color: white;
+    width: 50%;
+}
+#select {
+    width: 450px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+#btn-listar {
+    margin: 0px 3px;
+}
+#filaNomCol {
+    background-color: #01642c;
+    color: white;
+}
+.trList:nth-child(even) { /* Renglones pares */
+    background-color: #f1faee;
+}
+.trList:nth-child(odd) { /* Renglones impares */
+    background-color: #d3fac7;
+}

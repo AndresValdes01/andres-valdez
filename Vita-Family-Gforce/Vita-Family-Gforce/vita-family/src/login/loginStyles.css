@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.vflogo {
+    display: block;
+    margin: auto;
+    height: 300px;
+}
+
+.google-btn {
+    margin-top: 20px;
+    width: 240px;
+    height: 43px;
+    background-color: #19a500;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+  
+.google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+}
+    
+.btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: sans-serif;
+}
+  
+.google-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 6px #19a500;
+}
+  
+.google-btn:active {
+    background: #21d801;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:#008000;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px; 
+    width: 350px;
+    height: 150px;
+}
+
+
+.form-div {
+    font-family: sans-serif;
+    font-weight:700;
+    color: #ffffff;
+    margin: 5px;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+    
+    width: 100px;
+    height: 20px;
+    background-color: #19a500;
+
+}
+
+input {
+    display: inline-block;
+    width: 230px;
+    
+}
+
+.btn-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    border: none;
+    background-color: #19a500;
+    color:#ffffff;
+    width: 120px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    box-shadow: 0 0 6px #19a500;
+}
+  
+.btn-login:active {
+    background: #21d801;
+}

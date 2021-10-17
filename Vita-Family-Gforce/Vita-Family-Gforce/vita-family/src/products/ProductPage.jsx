@@ -1,45 +1,14 @@
 import React from "react";
 import logo from './logo.jpeg';
 import "./productsstyle.css";
-import axios from 'axios';
 
 const Mensaje = () => {
   alert("Producto Guardado correctamente");
 }
 
 function ProductPage() {
-  componentDidMount(){
-    axios.get('http://localhost:3001/api/productos')
-    .then(res=>{
-      const Productos = res.data.productos;
-      this.setState({Productos});
-    })
-  }
-     registrarProducto(Event){
-      Event.preventDefault();
-  
-      //consumir post con axios
-      axios.post('http://localhost:3001/api/productos',{
-        ID_producto: Event.target.ID_producto.value,  
-        Descripcion_producto: Event.target.Descripcion_producto.value,          
-        prediounidad: Event.target.preciounidad.value,
-        rocantidad: Event.target.cantidad.value,
-        estado: Event.target.estado.value,
-        buscarproducto: Event.target.buscarproducto.value,
-        crearproducto: Event.target.crearproducto.value,
-        registrarproducto: Event.target.registrarproducto.value,
-        disponible: Event.target.disponible.value,
-
-      }).then(res =>{ 
-         alert(res.data.message);
-        console.log(res.data);
-      })
-    
-    }
-  
-    render(){
   return(
-      <div>
+  <div>
       <div>
         <img src={logo} className= "logo.jpep" className="imagen"/>
         <h1 className= "h1products">Gestión de productos</h1>
