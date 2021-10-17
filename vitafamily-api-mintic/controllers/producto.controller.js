@@ -1,5 +1,5 @@
 'use strict'
-const Producto = require('../models/Producto.model.js')
+const Producto = require('../models/producto.model.js')
 
 function getProducto(req, res){
     Producto.find({}, (error, productos)=>{
@@ -67,6 +67,6 @@ function registrarProducto(req, res){
 
 
 module.exports = {
-    getProductos,
+    getProducto,
     registrarProducto
 }

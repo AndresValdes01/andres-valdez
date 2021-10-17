@@ -3,11 +3,12 @@ import logo from './logo.jpeg';
 import "./productsstyle.css";
 import axios from 'axios';
 
-const Mensaje = () => {
-  alert("Producto Guardado correctamente");
-}
+class ProductPage extends React.Component{
+  state = {
+    productos : []
+  }
 
-function ProductPage() {
+ 
   componentDidMount(){
     axios.get('http://localhost:3001/api/productos')
     .then(res=>{
@@ -20,15 +21,12 @@ function ProductPage() {
   
       //consumir post con axios
       axios.post('http://localhost:3001/api/productos',{
-        ID_producto: Event.target.ID_producto.value,  
-        Descripcion_producto: Event.target.Descripcion_producto.value,          
-        prediounidad: Event.target.preciounidad.value,
-        rocantidad: Event.target.cantidad.value,
+        ID_producto: Event.target.No.value,  
+        Descripcion_producto: Event.target.Descripcion.value,          
+        preciounidad: Event.target.preciounidad.value,
+        cantidad: Event.target.cantidad.value,
         estado: Event.target.estado.value,
-        buscarproducto: Event.target.buscarproducto.value,
-        crearproducto: Event.target.crearproducto.value,
-        registrarproducto: Event.target.registrarproducto.value,
-        disponible: Event.target.disponible.value,
+
 
       }).then(res =>{ 
          alert(res.data.message);
@@ -45,15 +43,16 @@ function ProductPage() {
         <h1 className= "h1products">Gestión de productos</h1>
       </div>
       <div>
-      <form className = "fusers">
-            <input className="registro" type="text" placeholder="Nuevo producto"/>
-            <input className="registro" type="number" placeholder="precio unidad"/><br/>
-            <input className="registro" type="number" placeholder="cantidad"/>
-            <select name="rol" id="selectorRol" >
+      <form onSubmit ={this.registrarProducto}className = "fproduct">
+            <input name ="No" className="registro" type="text" placeholder="Numero de producto"/>
+            <input name ="Descripcion" className="registro" type="text" placeholder="Nuevo producto"/>
+            <input name ="preciounidad"className="registro" type="number" placeholder="precio unidad"/><br/>
+            <input name="cantidad" className="registro" type="number" placeholder="cantidad"/>
+            <select name="estadop" id="selectorRol" name="estado">
                 <option >Disponible</option>
                 <option >No Disponible</option>
             </select><br/>
-            <button type="submit" onClick={()=>Mensaje()}>Registrar producto</button>
+            <button className="bt-product" type="submit" >Registrar producto</button>
             <button type="reset"> Cancelar</button>
         </form>
       </div>
@@ -73,64 +72,18 @@ function ProductPage() {
                       <th className ="thproducts">Descripción producto</th><th className ="thproducts"></th><th className ="thproducts">Almacenamiento</th><th className ="thproducts">Acción</th>
           </tr>
         </thead>
+        {this.state.productos.map(
+          producto =>
         <tr className="trproducts">
-          <td className ="tdproducts">1</td><td className ="tdproducts">1000</td><td className ="tdproducts">P001</td><td className ="tdproducts">3</td><td className ="tdproducts">Valeriana gotas</td>
-                  <td className ="tdproducts"></td><td className ="tdproducts">
-                    <select>
-                      <option> Se almacenó correctamente</option>
-                      <option>Almacen</option>
-                      <option >Bodega</option>
-                    </select>
-          </td>
-            <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button></td>
-          </tr>
-          <tr className="trproducts">
-            <td className ="tdproducts">2</td><td className ="tdproducts">1000</td><td className ="tdproducts">P002</td><td className ="tdproducts">3</td><td className ="tdproducts">Ensure lata x 400gr</td>
-            <td className ="tdproducts"></td>
-            <td className ="tdproducts">
-              <select>
-                <option> Se almacenó correctamente</option>
-                <option>Almacen</option>
-              <option >Bodega</option>
-              </select>
-            </td>
+          <td className ="tdproducts">{producto.No}</td><td className ="tdproducts">{producto.preciounidad}</td><td className ="tdproducts">8</td><td className ="tdproducts">{producto.cantidad}</td><td className ="tdproducts">{producto.Descripcion}</td>
+          <td className ="tdproducts">{producto.estado}</td>
           <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button></td>
-
           </tr>
-          <tr className="trproducts">
-          <td className ="tdproducts">3</td><td className ="tdproducts">1000</td><td className ="tdproducts">P003</td><td className ="tdproducts">3</td><td className ="tdproducts">vitamina D x 2000 ui caja x 30 cap</td>
-                  <td className ="tdproducts"></td><td className ="tdproducts">
-            <select>
-            <option> Se almacenó correctamente</option>
-            <option>Almacen</option>
-            <option >Bodega</option>
-            </select>
-        </td>
-        <td className ="tdproducts"><button> Ver producto</button><button>borrar</button><button>Actualizar</button>
-        </td>
-        </tr>
-      </table>
-
-
-
-			<a href="#" className="btn btn-success btn1"/>
-				                                          
-											 
-
-  Ir a Inicio
-
-<li class="nav-item">
-	<a class="nav-link" href="#">
-	  Listar
-	</a>
-  </li>
-  <li class="nav-item">
-	<a class="nav-link" href="#">
-	  Cerrar
-	</a>
-  </li>
-  </div>
-  )
+      )}
+           </table>
+</div>
+  );
+}
 }
 
-export default ProductPage
+export default ProductPage;
