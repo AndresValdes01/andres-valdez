@@ -5,8 +5,10 @@ import axios from 'axios';
 
 class ProductPage extends React.Component{
   state = {
-    productos : []
+    productos : [],
+    productoSeleccionado : null
   }
+
 
  
   componentDidMount(){
@@ -32,6 +34,19 @@ class ProductPage extends React.Component{
         console.log(res.data);
       })
     
+    }
+
+    // Actualizar
+    handleActualizar = ( event, id ) => {
+      axios.update( `http://localhost:3001/api/productos/${ id }`, {
+        descripcion: event.target.Descripcion.value,
+        precioUnidad: event.target.preciounidad.value,
+        cantidad: event.target.cantidad.value,
+        estado: event.target.estado.value
+      } ).then(res =>{
+        alert(res.data.message);
+        console.log(res.data);
+     })
     }
   
     render(){
@@ -67,7 +82,6 @@ class ProductPage extends React.Component{
       <table className= "tproducts">
         <thead className ="theadproducts">
           <tr className="trproducts">
-            <th className ="thproducts">ID</th>
             <th className ="thproducts">Precio unitario</th>
             <th className ="thproducts">Cantidad</th>
             <th className ="thproducts">Descripción producto</th>
@@ -78,12 +92,11 @@ class ProductPage extends React.Component{
         {this.state.productos.map(
           producto =>
         <tr className="trproducts">
-          <td className ="tdproducts">{producto.id}</td>
           <td className ="tdproducts">{producto.preciounidad}</td>
           <td className ="tdproducts">{producto.cantidad}</td>
           <td className ="tdproducts">{producto.Descripcion}</td>
           <td className ="tdproducts">{producto.estado}</td>
-          <td className ="tdproducts"><button>borrar</button><button>Actualizar</button></td>
+          <td className ="tdproducts"><button>borrar</button><button onClick={ this.handleActualizar( producto._id ) }>Actualizar</button></td>
           </tr>
       )}
            </table>

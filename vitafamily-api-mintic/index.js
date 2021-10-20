@@ -6,8 +6,8 @@ const config = require('./config');
 
 
 mongoose.connect(config.db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true
 }, (err, res) => {
     // en caso de que haya habido algún error
     if(err) {

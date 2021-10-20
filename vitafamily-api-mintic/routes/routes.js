@@ -16,4 +16,8 @@ api.delete('/gestionventas', VentasCtrl.deleteVenta);
 
 api.get('/productos', ProductosCtrl.getProducto);
 api.post('/productos', ProductosCtrl.registrarProducto);
+
+api .put( '/productos/:producto_id', ProductosCtrl .updateProducto );
+api .delete( '/productos/:producto_id', ProductosCtrl .deleteProducto );
+
 module.exports = api;
