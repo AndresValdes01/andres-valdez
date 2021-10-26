@@ -15,7 +15,7 @@ const ProductPage = () => {
     });
     const [ productos, setProductos ] = useState([]);
 
-    const { description, precio, cantidad, estado } = formData;       //  Desestructura la data del State
+    const { descripcion, precio, cantidad, estado } = formData;       //  Desestructura la data del State
 
     // Hace seguimiento a los cambios del estado de productos
     useEffect( () => {
@@ -32,10 +32,33 @@ const ProductPage = () => {
 
     }, [] );
 
+    // Agrega un producto nuevo
+    const createProduct = async ( producto ) => {
+        const response = await fetch( `http://localhost:5000/api/productos`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( producto )
+        });
+
+        const data = await response.json();
+
+        console.log( data );
+    }
+
     // Maneja el envio de la data del formulario
     const handleSubmit = ( event ) => {
-        event.preventDefault();
-        console.log( formData );
+        event.preventDefault();     // Evita la redireccion
+
+        // Agrega la data a la BD haciendo peticion al API
+        createProduct( formData );
+
+        //  Agrega el nuevo registro al estado del componente
+        setProductos([
+            formData,
+            ...productos
+        ]);
     }
 
     // Maneja los cambios en la data de los campos y establece el estado del componente
@@ -66,7 +89,7 @@ const ProductPage = () => {
                                 type="text"
                                 placeholder="Nuevo producto"
                                 name="descripcion"              //  String/Nombre del campo, con el mismo nombre de la variable que viene de la desestructuracion
-                                value={ description }           //  Variable viene de la desestructuracion
+                                value={ descripcion }           //  Variable viene de la desestructuracion
                                 onChange={ handleChange }       //  Closure/Funcion que actua ante los cambios
                             />
                         </div>
@@ -129,14 +152,14 @@ const ProductPage = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {   productos.map( producto =>
-                                        <tr className="trproducts">
-                                            <td className ="tdproducts">{producto.preciounidad}</td>
-                                            <td className ="tdproducts">{producto.cantidad}</td>
-                                            <td className ="tdproducts">{producto.Descripcion}</td>
-                                            <td className ="tdproducts">{producto.estado}</td>
+                                    {   productos.map( ( producto, index ) => (
+                                        <tr key={ index } className="trproducts">
+                                            <td className ="tdproducts">{ producto.precio }</td>
+                                            <td className ="tdproducts">{ producto.cantidad }</td>
+                                            <td className ="tdproducts">{ producto.descripcion }</td>
+                                            <td className ="tdproducts">{ producto.estado }</td>
                                             <td className ="tdproducts"><button>borrar</button><button>Actualizar</button></td>
-                                        </tr>
+                                        </tr>)
                                     )}
                                 </tbody>
                             </table>
