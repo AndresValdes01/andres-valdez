@@ -37,7 +37,7 @@ const ProductPage = () => {
 
     }, [ update ] );
 
-    // Agrega un producto nuevo
+    // Peticion API para agregar un producto
     const createProduct = async ( producto ) => {
         const response = await fetch( `http://localhost:5000/api/productos`, {
             method: 'POST',
@@ -50,8 +50,18 @@ const ProductPage = () => {
         const data = await response.json();
 
         console.log( data );
+
+        setFormData({
+            descripcion: '',
+            precio: 0,
+            cantidad: 0,
+            estado: ''
+        });
+
+        setUpdate( false );
     }
 
+    // Peticion API para eliminar un producto
     const deleteProduct = async ( productId ) => {
         const response = await fetch( `http://localhost:5000/api/productos/${ productId }`, {
             method: 'DELETE',
@@ -65,11 +75,9 @@ const ProductPage = () => {
         console.log( data );
     }
 
+    // Peticion API para actualizar un producto
     const updateProduct = async () => {
         const productoActualizado = formData;
-
-        //delete productoActualizado._id;
-        //delete productoActualizado.__v;
 
         const response = await fetch( `http://localhost:5000/api/productos/${ formData._id }`, {
             method: 'PUT',
@@ -82,6 +90,14 @@ const ProductPage = () => {
         const data = await response.json();
 
         console.log( data );
+        
+        setFormData({
+            descripcion: '',
+            precio: 0,
+            cantidad: 0,
+            estado: ''
+        });
+
         setUpdate( false );
     }
 
