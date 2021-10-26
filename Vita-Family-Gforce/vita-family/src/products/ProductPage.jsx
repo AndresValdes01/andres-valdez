@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from './logo.jpeg';
 import "./productsstyle.css";
 import axios from 'axios';
@@ -16,6 +16,21 @@ const ProductPage = () => {
     const [ productos, setProductos ] = useState([]);
 
     const { description, precio, cantidad, estado } = formData;       //  Desestructura la data del State
+
+    // Hace seguimiento a los cambios del estado de productos
+    useEffect( () => {
+
+        const getDataAPI = async () => {
+            const response = await fetch( `http://localhost:5000/api/productos` );
+            const data = await response.json();
+
+            console.log( data );
+            setProductos( data.productos );         // Establece nuevo estado de productos
+        }
+
+        getDataAPI();
+
+    }, [] );
 
     // Maneja el envio de la data del formulario
     const handleSubmit = ( event ) => {
