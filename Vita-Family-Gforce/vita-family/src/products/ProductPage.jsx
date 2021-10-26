@@ -7,12 +7,13 @@ const ProductPage = () => {
 
     // Defino State del Componente
     const [ formData, setFormData ] = useState({
-        descripcion: null,
+        descripcion: '',
         precio: 0,
         cantidad: 0,
-        estado: null
+        estado: ''
     });
     const [ productos, setProductos ] = useState([]);
+    const [ update, setUpdate ] = useState( false );
 
     const { descripcion, precio, cantidad, estado } = formData;       //  Desestructura la data del State
 
@@ -34,7 +35,7 @@ const ProductPage = () => {
 
         getDataAPI();
 
-    }, [] );
+    }, [ update ] );
 
     // Agrega un producto nuevo
     const createProduct = async ( producto ) => {
@@ -64,6 +65,34 @@ const ProductPage = () => {
         console.log( data );
     }
 
+    const updateProduct = async () => {
+        const productoActualizado = formData;
+
+        //delete productoActualizado._id;
+        //delete productoActualizado.__v;
+
+        const response = await fetch( `http://localhost:5000/api/productos/${ formData._id }`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify( productoActualizado )
+        });
+
+        const data = await response.json();
+
+        console.log( data );
+        setUpdate( false );
+    }
+
+    // Maneja actualizacion de producto
+    const handleUpdate = ( productId ) => {
+
+        const index = productos.findIndex( index => index._id === productId );
+        setUpdate( true );
+        setFormData( productos[ index ] );
+    }
+
     // Maneja eliminar producto
     const handleDelete = ( productId ) => {
 
@@ -78,14 +107,35 @@ const ProductPage = () => {
     const handleSubmit = ( event ) => {
         event.preventDefault();     // Evita la redireccion
 
-        // Agrega la data a la BD haciendo peticion al API
-        createProduct( formData );
+        if( update ) {
+            updateProduct();
+        }
+        else {
 
-        //  Agrega el nuevo registro al estado del componente
-        setProductos([
-            formData,
-            ...productos
-        ]);
+            // Agrega la data a la BD haciendo peticion al API
+            createProduct( formData );
+
+            //  Agrega el nuevo registro al estado del componente
+            setProductos([
+                formData,
+                ...productos
+            ]);
+        }
+
+    }
+
+    // Maneja los cambios cuando dan click al boton cancelar
+    const handleCancel = ( event ) => {
+        event.preventDefault();     // Evita la redireccion
+
+        setFormData({
+            descripcion: '',
+            precio: 0,
+            cantidad: 0,
+            estado: ''
+        });
+
+        setUpdate( false );
     }
 
     // Maneja los cambios en la data de los campos y establece el estado del componente
@@ -157,10 +207,10 @@ const ProductPage = () => {
                         <button
                             className="btn btn-submit bt-product"
                             type="submit"
-                        >Registrar producto</button>
+                        >{ `${ update ? 'Actualiza producto' : 'Crea producto' }` }</button>
                         <button
                             className="btn btn-cancel"
-                            type="reset"
+                            onClick={ handleCancel }
                         >Cancelar</button>
                     </div>
                 </form>
@@ -186,8 +236,12 @@ const ProductPage = () => {
                                             <td className ="tdproducts">{ producto.descripcion }</td>
                                             <td className ="tdproducts">{ producto.estado }</td>
                                             <td className ="tdproducts">
-                                                <button onClick={ () => handleDelete( producto._id ) }>Borrar</button>
-                                                <button>Actualizar</button>
+                                                <button
+                                                    onClick={ () => handleDelete( producto._id ) }
+                                                >Borrar</button>
+                                                <button
+                                                    onClick={ () => handleUpdate( producto._id ) }
+                                                >Actualizar</button>
                                             </td>
                                         </tr>)
                                     )}
