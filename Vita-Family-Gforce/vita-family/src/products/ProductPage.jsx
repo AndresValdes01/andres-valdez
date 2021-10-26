@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from './logo.jpeg';
 import "./productsstyle.css";
-import axios from 'axios';
 
 // Defino Componente Funcional
 const ProductPage = () => {
@@ -21,7 +20,12 @@ const ProductPage = () => {
     useEffect( () => {
 
         const getDataAPI = async () => {
-            const response = await fetch( `http://localhost:5000/api/productos` );
+            const response = await fetch( `http://localhost:5000/api/productos`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                }
+            });
             const data = await response.json();
 
             console.log( data );
@@ -45,6 +49,29 @@ const ProductPage = () => {
         const data = await response.json();
 
         console.log( data );
+    }
+
+    const deleteProduct = async ( productId ) => {
+        const response = await fetch( `http://localhost:5000/api/productos/${ productId }`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        });
+
+        const data = await response.json();
+
+        console.log( data );
+    }
+
+    // Maneja eliminar producto
+    const handleDelete = ( productId ) => {
+
+        // Elimina la data a la BD haciendo peticion al API
+        deleteProduct( productId );
+
+        //  Elimina el registro del estado del componente
+        setProductos( productos.filter( producto => producto._id !== productId ) );
     }
 
     // Maneja el envio de la data del formulario
@@ -158,7 +185,10 @@ const ProductPage = () => {
                                             <td className ="tdproducts">{ producto.cantidad }</td>
                                             <td className ="tdproducts">{ producto.descripcion }</td>
                                             <td className ="tdproducts">{ producto.estado }</td>
-                                            <td className ="tdproducts"><button>borrar</button><button>Actualizar</button></td>
+                                            <td className ="tdproducts">
+                                                <button onClick={ () => handleDelete( producto._id ) }>Borrar</button>
+                                                <button>Actualizar</button>
+                                            </td>
                                         </tr>)
                                     )}
                                 </tbody>
