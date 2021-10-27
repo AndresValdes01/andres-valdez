@@ -35,43 +35,30 @@ function registrarProducto(req, res){
         producto: req .body
     });
 
+}
 
-    //Primero buscamos el producto en la abse de datos
-    // Producto.findOne({id: req.body.id}, (err, productoEnBaseDeDatos)=>{
-    //     if(!productoEnBaseDeDatos){
-    //         //Si no se encuentra el producto, se guarda
-    //         let productoTemp = {
-    //             id: req.body.id,
-    //             Descripcion: req.body.Descripcion,
-    //             preciounidad: req.body.preciounidad,
-    //             cantidad: req.body.cantidad,
-    //             estado: req.body.estado,               
-    //         }
-        
-    //         let productoARegistrar = new Producto(productoTemp);
-        
-    //         productoARegistrar.save((error, productoRegistrado)=>{
-    //             if(!error){
-    //                 res.status(200).send({
-    //                     message: 'Producto registrado',
-    //                     productoRegistrado
-    //                 })
-    //             }else{
-    //                 res.status(500).send({
-    //                     message: `Error al guardar nuevo producto en la base de datos: ${err}`
-    //                 });
-    //             }
-    //         })
-
-            
-    //     }else{
-    //         //Si se encuentra el producto sacamos un error
-    //         res.status(202).send({
-    //             message: `El producto con ID ${req.body.id} ya se encuentra registrado`
-    //         })
-    //     }
-    // });
-
+const getOnlyProduct = async (req, res) => {
+    try {                            
+        Producto.findOne({_id: req.params.id}, (err, productoEnBaseDeDatos) => {            
+            if (productoEnBaseDeDatos) {    
+                // Si hay registros en la DB            
+                res.status(200).send({ 
+                    productoEnBaseDeDatos, 
+                    message: `Busqueda ralizada Correctamente`
+                });                
+            } else {
+                if (res.statusCode == 200) {
+                    res.send({
+                        message: `No hay productos registradas con el ID ${ req.params.id }`
+                    });
+                }                  
+            }
+        });
+    } catch (error) {
+        res.status(500).send({
+            message: `Error de conexion a la DB ${ err }, No se pudo Buscar producto ${ error }`
+        });
+    }
 }
 
 const updateProducto = async ( request, response ) => {
@@ -146,6 +133,7 @@ const deleteProducto = async ( request, response ) => {
 module.exports = {
     getProducto,
     registrarProducto,
+    getOnlyProduct,
     updateProducto,
     deleteProducto
 }
