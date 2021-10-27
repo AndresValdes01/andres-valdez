@@ -10,16 +10,17 @@ api.get('/usuarios', UsuarioCtrl.getUsuarios);
 api.post('/usuarios', UsuarioCtrl.registrarUsuario);
 
 api.get('/gestionventas', VentasCtrl.getVentas);
+api.get('/gestionventas/:id', VentasCtrl.getOnlySale);
+api.get('/gestionventas/:key/:value', VentasCtrl.getManySales);
 api.post('/gestionventas', VentasCtrl.registrarVenta);
 api.put('/gestionventas', VentasCtrl.updateVenta);
-api.delete('/gestionventas', VentasCtrl.deleteVenta);
+api.delete('/gestionventas/:id', VentasCtrl.deleteVenta);
 
 api.get('/productos', ProductosCtrl.getProducto);
 api.post('/productos', ProductosCtrl.registrarProducto);
 
 api.get('/productos/:id', ProductosCtrl.getOnlyProduct);
-
-api .put( '/productos/:producto_id', ProductosCtrl .updateProducto );
-api .delete( '/productos/:producto_id', ProductosCtrl .deleteProducto );
+api.put( '/productos/:producto_id', ProductosCtrl .updateProducto );
+api.delete( '/productos/:producto_id', ProductosCtrl .deleteProducto );
 
 module.exports = api;
