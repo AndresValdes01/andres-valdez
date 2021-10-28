@@ -19,23 +19,29 @@ const ProductPage = () => {
 
     // Hace seguimiento a los cambios del estado de productos
     useEffect( () => {
-
         const getDataAPI = async () => {
-            const response = await fetch( `http://localhost:5000/api/productos`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                }
-            });
-            const data = await response.json();
+            const url = 'http://localhost:5000/api/productos';
 
-            console.log( data );
-            setProductos( data.productos );         // Establece nuevo estado de productos
+            try {
+                const response = await fetch( url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    }
+                });
+                const data = await response.json();
+
+                console.log( data );
+                setProductos( data.productos );         // Establece nuevo estado de productos
+
+            } catch (error) {
+                console.error( error );
+            }
         }
 
         getDataAPI();
 
-    }, [ update ] );
+    }, [ setProductos ] );
 
     // Peticion API para agregar un producto
     const createProduct = async ( producto ) => {

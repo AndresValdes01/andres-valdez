@@ -78,8 +78,7 @@ const updateProducto = async ( request, response ) => {
         });
 
         // Consulta para actualizar producto
-        const productoActualizado = await Producto .findByIdAndUpdate({ _id: idProducto }, productoActualizar, { new: true } );
-        productoActualizado .save();            // Inserto cambios a la base de datos
+        const productoActualizado = await Producto .findOneAndUpdate({ _id: idProducto }, productoActualizar, { new: true } );
 
         response .json({
             mensaje: `Producto actualizado`,
@@ -99,7 +98,7 @@ const updateProducto = async ( request, response ) => {
 
 const deleteProducto = async ( request, response ) => {
     const idProducto = request .params .producto_id;
-
+    console.log( request .params .producto_id );
     try {
 
         // Consulta si el producto existe
@@ -112,8 +111,7 @@ const deleteProducto = async ( request, response ) => {
             }
         });
 
-        const productoEliminado = await Producto .findByIdAndRemove( idProducto );
-        productoEliminado .save();              // Eliminar de la base de datos
+        await Producto .findOneAndRemove( idProducto );
 
         response .json({
             mensaje: `Elimino registro`
